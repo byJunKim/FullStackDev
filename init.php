@@ -1,10 +1,5 @@
 <?php
 session_start();
-//echo "destory<br>";
-////session_destroy();
-
-
-//error_reporting(0);
 
 require 'database/connect.php';
 require 'functions/general.php';

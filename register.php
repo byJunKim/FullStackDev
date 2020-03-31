@@ -16,7 +16,7 @@ if(empty($_POST) === false){
 	}
 
 	if(preg_match("/\s/", $_POST['uname']) === 1 || preg_match("/\s/", $_POST['psw']) === 1){
-		$register_errors[] = "Your username must not contain any spaces<br>";
+		$register_errors[] = "Your username or password must not contain any spaces<br>";
 	}
 
 	if(strlen($_POST['uname']) < 2){
@@ -32,7 +32,7 @@ if(empty($_POST) === false){
 	}
 
 	if($_POST['psw'] !== $_POST['psw_again']){
-		$register_errors[] = "Password do not match<br>";
+		$register_errors[] = "Passwords do not match<br>";
 	}
 
 }
@@ -83,7 +83,7 @@ if(empty($register_errors) === true){
 				<input type="password" placeholder="Enter Password" name="psw" required>
 			</li>
 			<li>
-				<label for="psw_again"><b>Password Again*: </b></label>
+				<label for="psw_again"><b>Confirm Password*: </b></label>
 				<input type="password" placeholder="Enter Password" name="psw_again" required>
 			</li>
 			<li>
